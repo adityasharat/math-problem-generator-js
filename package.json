@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Generate random math problems and test their results",
   "author": "adityasharat",
-  "license": "Apache v2.0",
+  "license": "Apache-2.0",
   "repository": "adityasharat/math-problem-generator-js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

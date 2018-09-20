@@ -1,4 +1,4 @@
-# math-problem-generator-js
+# Math Problem Generator
 
 > Generate random math problems and test their results
 
@@ -15,12 +15,12 @@ npm install --save math-problem-generator-js
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'math-problem-generator-js'
+import MathProblems from 'math-problem-generator-js'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <h1>Let's Learn Some Math</h1>
     )
   }
 }
@@ -28,4 +28,4 @@ class Example extends Component {
 
 ## License
 
-Apache v2.0 © [adityasharat](https://github.com/adityasharat)
+Apache v2.0 © [adityasharat](https://github.com/adityasharat) 2018
