@@ -12,18 +12,8 @@ npm install --save math-problem-generator-js
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
-
+```JavaScript
 import MathProblems from 'math-problem-generator-js'
-
-class Example extends Component {
-  render () {
-    return (
-      <h1>Let's Learn Some Math</h1>
-    )
-  }
-}
 ```
 
 ## License
