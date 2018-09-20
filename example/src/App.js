@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'math-problem-generator-js'
+import MathProblems from 'math-problem-generator-js'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <h1>Let's Learn Some Math</h1>
+        <code>version: {MathProblems.version}</code>
       </div>
     )
   }
