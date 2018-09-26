@@ -21,3 +21,38 @@ describe('evalutor.isSafe', () => {
     expect(evalutor.isSafe(' 2 - 2 ')).toBe(true)
   })
 })
+
+describe('evalutor.evaluate', () => {
+  it('empty string', () => {
+    expect(evalutor.evaluate('')).toBeUndefined()
+    expect(evalutor.evaluate('   ')).toBeUndefined()
+  })
+  it('2 + 2', () => {
+    expect(evalutor.evaluate('2 + 2')).toBe(4)
+  })
+  it('2 - 2', () => {
+    expect(evalutor.evaluate('2 - 2')).toBe(0)
+  })
+  it('2 * 3', () => {
+    expect(evalutor.evaluate('2 * 3')).toBe(6)
+  })
+  it('1 + 2 * 3', () => {
+    expect(evalutor.evaluate('1 + 2 * 3')).toBe(7)
+  })
+  it('(1 + 2) * 3', () => {
+    expect(evalutor.evaluate('(1 + 2) * 3')).toBe(9)
+  })
+  it('unsafe expression should throw', () => {
+    expect(() => {
+      evalutor.evaluate('blah')
+    }).toThrow()
+  })
+  it('invalid expression should throw', () => {
+    expect(() => {
+      evalutor.evaluate('(1 + 2 * 3')
+    }).toThrow()
+  })
+  /*it('2 ^ 4', () => {
+    expect(evalutor.evaluate('2 ^ 4')).toBe(16)
+  })*/
+})
