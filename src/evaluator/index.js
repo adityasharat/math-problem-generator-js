@@ -5,5 +5,9 @@ export function isSafe(expression) {
 }
 
 export function evaluate(expression) {
+  if (!isSafe(expression)) {
+    throw new Error(`"${expression}" is not a safe or valid expression`)
+  }
 
+  return eval(expression)
 }
