@@ -1,3 +1,3 @@
-export class Generator {
+export default class Generator {
 
 };
