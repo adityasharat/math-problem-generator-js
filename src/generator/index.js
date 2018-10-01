@@ -2,7 +2,7 @@ function fill(min, max) {
   return Array.from({ length: max - min + 1 }, (_, i) => i);
 }
 
-function generate(list, perm, maxLen, currLen) {
+function permute(list, perm, maxLen, currLen) {
   if (currLen === maxLen) {
       return perm;
   }
@@ -12,12 +12,12 @@ function generate(list, perm, maxLen, currLen) {
         perm.push(currPerm.concat(list[k]));
     }
   }
-  return generate(list, perm, maxLen, currLen + 1);
+  return permute(list, perm, maxLen, currLen + 1);
 };
 
 function permutations(list, maxLen) {
   var perm = list.map(val => [val]);
-  return generate(list, perm, maxLen, 1);
+  return permute(list, perm, maxLen, 1);
 }
 
 export class Problem {
@@ -31,10 +31,15 @@ export class Problem {
   }
 }
 
+function generate(min, max) {
+  const array = fill(min, max);
+}
+
 export class RandomStatelessGenerator {
   constructor(min, max) {
     this.min = min;
     this.max = max;
+    this.problems = generate(min, max);
   }
 
   next(op) {
