@@ -20,6 +20,12 @@ function permutations(list, maxLen) {
   return permute(list, perm, maxLen, 1);
 }
 
+
+function generate(min, max, size) {
+  const array = fill(min, max);
+  return permutations(array, 2);
+}
+
 export class Problem {
   constructor(x, op, y) {
     this.x = x;
@@ -31,21 +37,21 @@ export class Problem {
   }
 }
 
-function generate(min, max) {
-  const array = fill(min, max);
+function getSize(level) {
+  return level;
 }
 
 export class RandomStatelessGenerator {
-  constructor(min, max) {
+  constructor(min, max, level) {
     this.min = min;
     this.max = max;
-    this.problems = generate(min, max);
+    this.problems = generate(min, max, getSize(level));
+    this.index = 0;
   }
 
   next(op) {
-    const x = Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-    const y = Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-
-    return new Problem(x, op, y);
+    const set = this.problems[this.index];
+    this.index++;
+    return new Problem(set[0], op, set[1]);
   }
 }
