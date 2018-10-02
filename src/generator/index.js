@@ -1,32 +1,12 @@
-function fill(min, max) {
-  return Array.from({ length: max - min + 1 }, (_, i) => i);
-}
+import { fill, permutations, shuffle } from '../utils'
 
-function permute(list, perm, maxLen, currLen) {
-  if (currLen === maxLen) {
-      return perm;
-  }
-  for (var i = 0, len = perm.length; i < len; i++) {
-    var currPerm = perm.shift();
-    for (var k = 0; k < list.length; k++) {
-        perm.push(currPerm.concat(list[k]));
-    }
-  }
-  return permute(list, perm, maxLen, currLen + 1);
-};
-
-function permutations(list, maxLen) {
-  var perm = list.map(val => [val]);
-  return permute(list, perm, maxLen, 1);
+export function getSize(level) {
+  return level;
 }
 
 function generate(min, max, size) {
   const array = fill(min, max);
   return permutations(array, 2);
-}
-
-function getSize(level) {
-  return level;
 }
 
 export class Problem {
