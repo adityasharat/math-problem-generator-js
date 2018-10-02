@@ -20,10 +20,13 @@ function permutations(list, maxLen) {
   return permute(list, perm, maxLen, 1);
 }
 
-
 function generate(min, max, size) {
   const array = fill(min, max);
   return permutations(array, 2);
+}
+
+function getSize(level) {
+  return level;
 }
 
 export class Problem {
@@ -35,10 +38,6 @@ export class Problem {
   toString() {
     return this.x + this.op + this.y;
   }
-}
-
-function getSize(level) {
-  return level;
 }
 
 export class RandomStatelessGenerator {
