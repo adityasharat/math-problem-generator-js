@@ -24,7 +24,7 @@ export class RandomStatelessGenerator {
   constructor(min, max, level) {
     this.min = min;
     this.max = max;
-    this.problems = generate(min, max, getSize(level));
+    this.problems = shuffle(generate(min, max, getSize(level)));
     this.index = 0;
   }
 
