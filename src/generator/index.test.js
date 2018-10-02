@@ -11,3 +11,11 @@ describe('RandomStatelessGenerator', () => {
     expect(problem).toBeDefined();
   })
 })
+
+describe('Problem', () => {
+  it('is evaulated correctly', () => {
+    const generator = new RandomStatelessGenerator(0, 9);
+    const problem = generator.next('+');
+    expect(problem.evaluate()).toBe(eval(problem.toString()));
+  })
+})
