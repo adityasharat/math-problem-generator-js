@@ -1,4 +1,5 @@
 import { fill, permutations, shuffle } from '../utils'
+import * as evaluator from '../evaluator'
 
 export function getSize(level) {
   return level;
@@ -17,6 +18,9 @@ export class Problem {
   }
   toString() {
     return this.x + this.op + this.y;
+  }
+  evaluate() {
+    return evaluator.evaluate(this.toString());
   }
 }
 
