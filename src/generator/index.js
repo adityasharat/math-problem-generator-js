@@ -24,7 +24,7 @@ export class Problem {
   }
 }
 
-export class RandomStatelessGenerator {
+export class SimpleGenerator {
   constructor(min, max, level) {
     this.min = min;
     this.max = max;
