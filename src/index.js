@@ -1,4 +1,5 @@
-import * as evaluator from './evaluator';
+import * as evaluator from './evaluator'
+import { SimpleGenerator } from './generators'
 
 const MathProblems = {};
 
