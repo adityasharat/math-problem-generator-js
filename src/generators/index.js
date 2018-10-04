@@ -6,14 +6,15 @@ export function getSize(level) {
 }
 
 function generate(min, max, size) {
-  return shuffle(permutations(fill(min, max), 2));
+  return shuffle(permutations(fill(min, max), getSize(size)));
 }
 
 export class SimpleGenerator {
   constructor(min, max, level) {
     this.min = min;
     this.max = max;
-    this.problems = shuffle(generate(min, max, getSize(level)));
+    this.level = level;
+    this.problems = generate(min, max, level);
     this.index = 0;
   }
 
