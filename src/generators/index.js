@@ -6,8 +6,7 @@ export function getSize(level) {
 }
 
 function generate(min, max, size) {
-  const array = fill(min, max);
-  return permutations(array, 2);
+  return shuffle(permutations(fill(min, max), 2));
 }
 
 export class SimpleGenerator {
