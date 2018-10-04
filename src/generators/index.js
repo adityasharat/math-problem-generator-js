@@ -1,5 +1,5 @@
 import { fill, permutations, shuffle } from '../utils'
-import * as evaluator from '../evaluator'
+import Problem from './Problem'
 
 export function getSize(level) {
   return level;
@@ -8,20 +8,6 @@ export function getSize(level) {
 function generate(min, max, size) {
   const array = fill(min, max);
   return permutations(array, 2);
-}
-
-export class Problem {
-  constructor(x, op, y) {
-    this.x = x;
-    this.op = op;
-    this.y = y;
-  }
-  toString() {
-    return this.x + this.op + this.y;
-  }
-  evaluate() {
-    return evaluator.evaluate(this.toString());
-  }
 }
 
 export class SimpleGenerator {
