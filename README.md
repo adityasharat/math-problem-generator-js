@@ -14,6 +14,11 @@ npm install --save math-problem-generator
 
 ```JavaScript
 import MathProblems from 'math-problem-generator'
+
+const evaluator = MathProblems.getEvaluator();
+
+evaluator.evaluate('2+2'); // 4
+
 ```
 
 ## License
