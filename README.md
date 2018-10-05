@@ -20,7 +20,7 @@ evaluator.evaluate('2+2'); // 4
 
 const generator = MathProblems.getGenerator();
 let problem = generator.next(); // {x: <number>, y: <number>, op: '<operation>'}
-
+problem.evaluate(); // returns the result
 ```
 
 ## License
