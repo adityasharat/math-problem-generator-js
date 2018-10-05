@@ -7,13 +7,13 @@
 ## Install
 
 ```bash
-npm install --save math-problem-generator-js
+npm install --save math-problem-generator
 ```
 
 ## Usage
 
 ```JavaScript
-import MathProblems from 'math-problem-generator-js'
+import MathProblems from 'math-problem-generator'
 ```
 
 ## License
