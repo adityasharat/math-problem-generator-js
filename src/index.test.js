@@ -5,6 +5,6 @@ describe('MathProblems', () => {
     expect(MathProblems).toBeDefined()
   })
   it('has evaluator', () => {
-    expect(MathProblems.evaluator).toBeDefined()
+    expect(MathProblems.getEvaluator()).toBeDefined()
   })
 })
