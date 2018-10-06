@@ -4266,7 +4266,7 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
-"math-problem-generator-js@link:..":
+"math-problem-generator@link:..":
   version "0.0.0"
   uid ""
 
