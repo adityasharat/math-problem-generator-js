@@ -1,6 +1,6 @@
 {
-  "short_name": "math-problem-generator-js",
-  "name": "math-problem-generator-js",
+  "short_name": "math-problem-generator",
+  "name": "math-problem-generator",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
