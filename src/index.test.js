@@ -8,6 +8,6 @@ describe('MathProblems', () => {
     expect(MathProblems.getEvaluator()).toBeDefined()
   })
   it('has generator', () => {
-    expect(MathProblems.getGenerator()).toBeDefined()
+    expect(MathProblems.createGenerator(1)).toBeDefined()
   })
 })
