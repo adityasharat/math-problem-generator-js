@@ -1,7 +1,7 @@
 {
-  "name": "math-problem-generator-js-example",
+  "name": "math-problem-generator-example",
   "homepage": "https://adityasharat.github.io/math-problem-generator-js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -9,7 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "math-problem-generator-js": "link:.."
+    "math-problem-generator": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",
