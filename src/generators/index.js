@@ -26,14 +26,14 @@ function getGeneratorParams(level) {
       break;
   }
 
-  return { min, max, size, level };
+  return { level, min, max, size };
 }
 
 export class SimpleGenerator {
-  constructor({min, max, size, level}) {
+  constructor({level, min, max, size}) {
+    this.level = level;
     this.min = min;
     this.max = max;
-    this.level = level;
     this.problems = generate(min, max, size);
     this.index = 0;
   }
