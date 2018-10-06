@@ -45,7 +45,7 @@ export class SimpleGenerator {
   }
 }
 
-export function generator(level) {
+export function create(level) {
   const params = getGeneratorParams(level);
   return new SimpleGenerator(params);
 }
