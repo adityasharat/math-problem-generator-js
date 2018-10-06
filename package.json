@@ -1,6 +1,6 @@
 {
   "name": "math-problem-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate random math problems and test their results",
   "author": "adityasharat",
   "license": "Apache-2.0",
