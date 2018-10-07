@@ -20,8 +20,8 @@ function getGeneratorParams(level) {
       size = 2;
       break;
     default:
-      min = 100;
-      max = 999;
+      min = 10;
+      max = 99;
       size = 2;
       break;
   }
@@ -39,6 +39,9 @@ export class SimpleGenerator {
   }
 
   next(op) {
+    if (this.problems.length >= this.index) {
+      return null;
+    }
     const set = this.problems[this.index];
     this.index++;
     return new Problem(set[0], op, set[1]);
@@ -49,3 +52,5 @@ export function create(level) {
   const params = getGeneratorParams(level);
   return new SimpleGenerator(params);
 }
+
+export { Problem }
