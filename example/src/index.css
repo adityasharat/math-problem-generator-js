@@ -36,6 +36,7 @@ body {
 }
 
 .result-input input {
+  border: 1px #efefef solid;
   font-size: 1em;
   max-width: 60px;
 }
