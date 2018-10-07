@@ -12,14 +12,14 @@ class ProblemUI extends Component {
   render() {
     const problem = this.state.problem;
     return (
-      <div>
-        <div>
+      <div className="problem-ui">
+        <div className="expression">
           <span className="param x">{problem.x}</span>
           <span className="op">{problem.op}</span>
           <span className="param y">{problem.y}</span>
           <span className="symbol eq">=</span>
         </div>
-        <div>
+        <div className="result-input">
           <input/>
         </div>
       </div>
@@ -34,10 +34,10 @@ export default class App extends Component {
     return (
       <div>
         <h1>Let's Learn Some Math</h1>
-          <ul>
+          <ul className="problems">
             {
               generator.problems.map((p, i) => {
-                return <li><ProblemUI key={i} problem={p} /></li>
+                return <li key={i}><ProblemUI problem={p} /></li>
               })
             }
           </ul>
