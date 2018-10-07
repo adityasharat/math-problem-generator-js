@@ -11,7 +11,6 @@ class ProblemUI extends Component {
   }
   render() {
     const problem = this.state.problem;
-    console.log(problem)
     return (
       <div>
         <div>
@@ -36,11 +35,11 @@ export default class App extends Component {
       <div>
         <h1>Let's Learn Some Math</h1>
           <ul>
-            <li>
-              {
-                generator.problems.map((p, i) => <ProblemUI key={i} problem={p} />)
-              }
-            </li>
+            {
+              generator.problems.map((p, i) => {
+                return <li><ProblemUI key={i} problem={p} /></li>
+              })
+            }
           </ul>
         <code>version: {MathProblems.version}</code>
       </div>
