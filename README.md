@@ -18,7 +18,7 @@ import MathProblems from 'math-problem-generator'
 const evaluator = MathProblems.getEvaluator();
 evaluator.evaluate('2+2'); // 4
 
-const generator = MathProblems.getGenerator();
+const generator = MathProblems.getGenerator(1);
 let problem = generator.next(); // {x: <number>, y: <number>, op: '<operation>'}
 problem.evaluate(); // returns the result
 ```
