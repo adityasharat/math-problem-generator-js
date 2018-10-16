@@ -2,7 +2,7 @@
 
 > Generate random math problems and test their results
 
-[![NPM](https://img.shields.io/npm/v/math-problem-generator-js.svg)](https://www.npmjs.com/package/math-problem-generator-js) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/math-problem-generator.svg)](https://www.npmjs.com/package/math-problem-generator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
